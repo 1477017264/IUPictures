@@ -40,6 +40,16 @@
 			    </div>
 		</div>
 		<button type="button" id="toTop" onclick="goTop();"></button>
+		
+		<div id="footer">
+			<div class="headname">
+				<p>最右@</p><img src="img/head.jpg" ><p>大调吖</p>
+			</div>
+			<div class="foot">
+				<p>Design By DaDio</p>
+			</div>
+		</div>
+		
 		<script>
 			let bg = document.querySelector('#bg')
 			let moon = document.querySelector('#moon')
@@ -63,7 +73,7 @@
 			}
 
 			window.onscroll = function() {
-				if (document.documentElement.scrollTop + document.body.scrollTop > 100) {
+				if (document.documentElement.scrollTop + document.body.scrollTop >850) {
 					document.getElementById("toTop").style.display = "block";
 				} else {
 					document.getElementById("toTop").style.display = "none";
