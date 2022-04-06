@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="UTF-8">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>IU 横屏美图 💕</title>
+		<link href="https://cdn.bootcss.com/magnific-popup.js/1.1.0/magnific-popup.min.css" rel="stylesheet" />
+		<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+		<script src="https://cdn.bootcss.com/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+		<link rel="icon" href="img/favicon.ico">
+		<!-- <script src="js/jquery-3.5.1.min.js" type="text/javascript" charset="utf-8"></script> -->
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+				font-family: 'montserrat', sans-serif;
+				box-sizing: border-box;
+			}
+
+			.gallery-section {
+				width: 100%;
+				padding: 30px 0;
+				background: #0a2a43;
+			}
+
+			.inner-width {
+				width: 100%;
+				max-width: 1200px;
+				margin: auto;
+				padding: 0 20px;
+			}
+
+			.gallery-section h1 {
+				text-align: center;
+				text-transform: uppercase;
+				font-family: 幼圆;
+				color: #f1f1f1;
+			}
+
+			.border {
+				width: 180px;
+				height: 4px;
+				background: #f1f1f1;
+				font-family: 幼圆;
+				margin: 30px auto;
+			}
+
+			.gallery-section .gallery {
+				display: flex;
+				flex-wrap: wrap-reverse;
+				justify-content: center;
+			}
+
+			.gallery-section .image {
+				flex: 25%;
+				overflow: hidden;
+				cursor: pointer;
+			}
+
+			.gallery-section .image img {
+				width: 100%;
+				height: 100%;
+				transition: 0.4s;
+			}
+
+			.gallery-section .image:hover img {
+				transform: scale(1.4);
+			}
+
+			@media screen and (max-width: 960px) {
+				.gallery-section .image {
+					flex: 33.33%;
+				}
+			}
+
+			@media screen and (max-width: 768px) {
+				.gallery-section .image {
+					flex: 50%;
+				}
+			}
+
+			@media screen and (max-width: 480px) {
+				.gallery-section .image {
+					flex: 100%;
+				}
+			}
+
+			#toTop {
+				display: flex;
+				width: 50px;
+				height: 73px;
+				background: url(img/top.png);
+				background-size: cover;
+				z-index: 200;
+				position: fixed;
+				bottom: 40px;
+				right: 30px;
+				border-radius: 100%;
+				border: none;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="gallery-section">
+			<div class="inner-width">
+				<h1>IU 横屏美图</h1>
+				<div class="border"></div>
+
+				<div class="gallery" id="top">
+					<a href="img/IUhorizontal1.jpg" class="image">
+						<img src="img/IUhorizontal1.jpg" alt="" />
+					</a>
+					<a href="img/IUhorizontal2.jpg" class="image">
+						<img src="img/IUhorizontal2.jpg" alt="" />
+					</a>
+					<a href="img/IUhorizontal3.jpg" class="image">
+						<img src="img/IUhorizontal3.jpg" alt="" />
+					</a>
+					<a href="img/IUhorizontal4.jpg" class="image">
+						<img src="img/IUhorizontal4.jpg" alt="" />
+					</a>
+					<a href="img/IUhorizontal5.jpg" class="image">
+						<img src="img/IUhorizontal5.jpg" alt="" />
+					</a>
+					<a href="img/IUhorizontal6.jpg" class="image">
+						<img src="img/IUhorizontal6.jpg" alt="" />
+					</a>
+					<a href="img/IUhorizontal7.jpg" class="image">
+						<img src="img/IUhorizontal7.jpg" alt="" />
+					</a>
+					<a href="img/IUhorizontal8.jpg" class="image">
+						<img src="img/IUhorizontal8.jpg" alt="" />
+					</a>
+					<a href="img/IUhorizontal9.jpg" class="image">
+						<img src="img/IUhorizontal9.jpg" alt="" />
+					</a>
+					<a href="img/IUhorizontal10.jpg" class="image">
+						<img src="img/IUhorizontal10.jpg" alt="" />
+					</a>
+					<a href="img/IUhorizontal11.jpg" class="image">
+						<img src="img/IUhorizontal11.jpg" alt="" />
+					</a>
+					<a href="img/IUhorizontal12.jpg" class="image">
+						<img src="img/IUhorizontal12.jpg" alt="" />
+					</a>
+					<a href="img/IUhorizontal13.jpg" class="image">
+						<img src="img/IUhorizontal13.jpg" alt="" />
+					</a>
+					<a href="img/IUhorizontal14.jpg" class="image">
+						<img src="img/IUhorizontal14.jpg" alt="" />
+					</a>
+					<a href="img/IUhorizontal15.jpg" class="image">
+						<img src="img/IUhorizontal15.jpg" alt="" />
+					</a>
+					<a href="img/IUhorizontal16.jpg" class="image">
+						<img src="img/IUhorizontal16.jpg" alt="" />
+					</a>
+					<a href="img/IUhorizontal17.jpg" class="image">
+						<img src="img/IUhorizontal17.jpg" alt="" />
+					</a>
+				</div>
+			</div>
+			<button type="button" id="toTop" onclick="goTop();"></button>
+		</div>
+
+		<script>
+			$('.gallery').magnificPopup({
+				delegate: 'a',
+				type: 'image',
+				gallery: {
+					enabled: true
+				}
+			})
+		</script>
+
+		<script type="text/javascript">
+		window.onscroll = function() {
+			if (document.documentElement.scrollTop + document.body.scrollTop > 700) {
+				document.getElementById("toTop").style.display = "block";
+			} else {
+				document.getElementById("toTop").style.display = "none";
+			}
+		}
+		
+			function goTop() {
+				$("html,body").animate({
+					scrollTop: $("#top").offset().top
+				}, 2000);
+			}
+		</script>
+
+
+	</body>
+</html>
