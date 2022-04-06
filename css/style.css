@@ -22,7 +22,7 @@
 
 body {
 	background-color: #0a2a43;
-	min-height: 3000px;
+	/* min-height: 3000px; */
 }
 
 section {
@@ -110,7 +110,7 @@ section img {
 	background-size: cover;
 	z-index: 200;
 	position: fixed;
-	bottom: 40px;
+	bottom: 140px;
 	right: 30px;
 	border-radius: 100%;
 	border: none;
@@ -234,4 +234,39 @@ section img {
 #bonner a:hover {
     color: #Fff;
     background-color: var(--a_hover_background_color);
+}
+
+#footer{
+	height: 60px;
+	background: #193952;
+	color: #f1f1f1;
+	padding: 20px;
+}
+
+.headname p{
+	font-size: 28px;
+	text-align: center;
+	font-family: 幼圆;
+	flex-direction: column;
+	display: flex;
+	justify-content: center;
+	margin: 5px;
+}
+
+.headname{
+	display: flex;
+	justify-content: flex-start;
+	float: left;
+}
+
+#footer img{
+	width: 50px;
+	height: 50px;
+	border-radius: 100%;
+}
+
+.foot{
+	padding-top: 30px;
+	display: flex;
+	justify-content: flex-end;
 }
